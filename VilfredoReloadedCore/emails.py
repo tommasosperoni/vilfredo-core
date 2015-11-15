@@ -28,6 +28,7 @@ from . import app
 from email.mime.text import MIMEText
 from subprocess import Popen, PIPE
 import os
+import mandrill
 
 def send_email(subject, sender_email, recipient_email, text_body):
     if os.environ.get('EMAIL_OFF', '0') == '0':
